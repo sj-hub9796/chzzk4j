@@ -99,6 +99,18 @@ publishing {
     }
 }
 
+tasks {
+    javadoc {
+        options.encoding = "UTF-8"
+    }
+    compileJava {
+        options.encoding = "UTF-8"
+    }
+    compileTestJava {
+        options.encoding = "UTF-8"
+    }
+}
+
 signing {
     isRequired = true
     sign(publishing.publications[rootProject.name])
