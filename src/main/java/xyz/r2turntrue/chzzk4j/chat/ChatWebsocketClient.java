@@ -1,8 +1,8 @@
 package xyz.r2turntrue.chzzk4j.chat;
 
-import com.google.gson.Gson;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
+import net.sjhub.sjcore.libs.google.gson.Gson;
+import net.sjhub.sjcore.libs.google.gson.JsonObject;
+import net.sjhub.sjcore.libs.google.gson.JsonParser;
 import org.java_websocket.client.WebSocketClient;
 import org.java_websocket.handshake.ServerHandshake;
 import xyz.r2turntrue.chzzk4j.exception.ChatFailedConnectException;
