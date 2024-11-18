@@ -17,7 +17,7 @@ repositories {
 }
 
 dependencies {
-    implementation("io.github.R2turnTrue:chzzk4j:0.0.11")
+    implementation("io.github.R2turnTrue:chzzk4j:0.0.12")
 }
 ```
 
@@ -148,6 +148,36 @@ Thread.sleep(700000);
 chat.closeBlocking();
 ```
 
+### get live details/status
+```java
+chzzk.getLiveStatus("Channel ID");
+chzzk.getLiveDetail("Channel ID");
+```
+
+## Naver Login
+Naver login requires Selenium and ChromeDriver configuration.
+
+1. Click [here](https://googlechromelabs.github.io/chrome-for-testing/) to move ChromeDriver download page.
+2. Add ChromeDriver path to system property
+```java
+void doSomething() {
+    Chrome.setDriverProperty("Your ChromeDriver path");
+}
+```
+
+```java
+void authorizeChzzkAutomatically() {
+    Naver naver = new Naver("Naver ID", "Naver Password");
+    naver.login().thenRun(() -> {
+        Chzzk chzzk = new ChzzkBuilder()
+                .withAuthorization(naver)
+                .build();
+
+        System.out.println(chzzk.getLoggedUser());
+    }).join();
+}
+```
+
 ## features
 
 - [x] get channel information & rules
@@ -157,12 +187,13 @@ chat.closeBlocking();
 - [x] get recommendation channels
 - [x] fix invalid json (chat)
 - [x] load emoji pack
+- [x] get live status
+- [x] get live detail
 
 ### need to implement
 
+- [ ] write javadocs of all methods/classes/etc..
 - [ ] parse emoji from chat message
 - [ ] get following channels of user that logged in
 - [ ] get video information
-- [ ] get live status
-- [ ] get live detail
 - [ ] get cheese ranking
