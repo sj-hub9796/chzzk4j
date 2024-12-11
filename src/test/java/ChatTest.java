@@ -1,4 +1,4 @@
-import com.google.gson.Gson;
+import net.sjhub.sjcore.libs.google.gson.Gson;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import xyz.r2turntrue.chzzk4j.Chzzk;

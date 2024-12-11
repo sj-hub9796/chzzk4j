@@ -1,8 +1,8 @@
 package xyz.r2turntrue.chzzk4j.util;
 
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
+import net.sjhub.sjcore.libs.google.gson.JsonElement;
+import net.sjhub.sjcore.libs.google.gson.JsonObject;
+import net.sjhub.sjcore.libs.google.gson.JsonParser;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;

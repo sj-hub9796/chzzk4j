@@ -1,6 +1,6 @@
 package xyz.r2turntrue.chzzk4j.chat;
 
-import com.google.gson.JsonElement;
+import net.sjhub.sjcore.libs.google.gson.JsonElement;
 import xyz.r2turntrue.chzzk4j.Chzzk;
 import xyz.r2turntrue.chzzk4j.exception.NotLoggedInException;
 import xyz.r2turntrue.chzzk4j.types.ChzzkUser;

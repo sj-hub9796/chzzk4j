@@ -1,7 +1,7 @@
 package xyz.r2turntrue.chzzk4j;
 
-import com.google.gson.Gson;
-import com.google.gson.JsonElement;
+import net.sjhub.sjcore.libs.google.gson.Gson;
+import net.sjhub.sjcore.libs.google.gson.JsonElement;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import org.jetbrains.annotations.NotNull;

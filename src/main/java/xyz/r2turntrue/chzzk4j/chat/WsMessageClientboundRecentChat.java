@@ -1,6 +1,6 @@
 package xyz.r2turntrue.chzzk4j.chat;
 
-import com.google.gson.Gson;
+import net.sjhub.sjcore.libs.google.gson.Gson;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Date;
