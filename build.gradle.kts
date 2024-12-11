@@ -10,7 +10,15 @@ plugins {
 }
 
 group = "io.github.R2turnTrue"
-version = "0.0.11-dev"
+version = "0.0.12"
+
+val publishProps = Properties()
+publishProps.load(
+    File("publish.properties").inputStream())
+
+ext["signing.keyId"] = publishProps["signing.keyId"]
+ext["signing.password"] = publishProps["signing.password"]
+ext["signing.secretKeyRingFile"] = publishProps["signing.secretKeyRingFile"]
 
 repositories {
     mavenCentral()
@@ -25,6 +33,7 @@ dependencies {
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
     implementation("com.google.code.gson:gson:2.10.1")
     implementation("org.java-websocket:Java-WebSocket:1.5.5")
+    implementation("org.seleniumhq.selenium:selenium-java:4.26.0")
 }
 
 tasks.test {
